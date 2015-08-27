@@ -248,7 +248,7 @@ if (bio.skills.length > 0) {
 	// $("#skills").append(formattedSkill5);
 }
 
-var displayWork = function() {
+work.display = function() {
 	for (var job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 	// workEmployer and workTitle concat
@@ -266,7 +266,7 @@ var displayWork = function() {
 	}
 };
 
-displayWork();
+work.display();
 
 // $("#main").append(internationalizeButton);
 
@@ -303,3 +303,12 @@ projects.display = function() {
 projects.display();
 
 $("#mapDiv").append(googleMap);
+
+education.display = function() {
+	for (var school in education.schools) {
+		$("#education").append(HTMLschoolStart);
+
+		var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
+		$("#education-entry:last").append(formattedSchoolName);
+	}
+}
