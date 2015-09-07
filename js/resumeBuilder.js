@@ -244,9 +244,10 @@ $("#topContacts").append(formattedTwitter);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#topContacts").append(formattedLocation);
 var formattedPicture = HTMLbioPic.replace("%data%", bio.bioPic);
-$("#header").append(formattedWelcmMsg);
-var formattedWelcmMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $("#header").append(formattedPicture);
+var formattedWelcmMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(formattedWelcmMsg);
+
 
 /* Bio Skills Section */
 
